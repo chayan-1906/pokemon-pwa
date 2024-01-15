@@ -1,11 +1,10 @@
-import {Card, CardMedia, CircularProgress, Grid, Stack, Typography, useMediaQuery} from '@mui/material'
+import {Card, CardMedia, CircularProgress, Grid, Stack, Typography} from '@mui/material'
 import {useEffect} from 'react'
 import {usePokemonContext} from './contexts/PokemonContext.jsx'
-import {capitalize} from "./globals/GlobalFunctions.jsx";
+import {capitalize} from './globals/GlobalFunctions.jsx'
 
 function App() {
     let {getAllPokemonsApi, pokemon_loading, pokemons} = usePokemonContext()
-    const betweenXSSM = useMediaQuery((theme) => theme.breakpoints.between('xs', 'sm'))
 
     useEffect(() => {
         const callApi = () => {
