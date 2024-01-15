@@ -9,7 +9,7 @@
     <link rel='stylesheet'
           href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'/>
     <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'/>
-    <link rel='manifest' href='./src/manifest.json'/>
+    <link rel='manifest' href='manifest.json'/>
     <title>Pokemon PWA</title>
 </head>
 <body>
@@ -19,7 +19,7 @@
 <script>
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-            navigator.serviceWorker.register('./src/serviceWorker.js').then((reg) => {
+            navigator.serviceWorker.register('./serviceWorker.js').then((reg) => {
                 console.log('Worker Registered')
             }).catch((err) => {
                 console.log('Error in service worker registration.')
