@@ -1,9 +1,8 @@
 //STORAGE OF BROWSER
 const CACHE_NAME = 'pokemon-pwa'
-const urlsToCache = ['index.html', 'offline.html']
+const urlsToCache = ['./index.html', './offline.html']
 const self = this
 
-//installation
 self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open(CACHE_NAME).then((cache) => {
@@ -14,16 +13,14 @@ self.addEventListener('install', (event) => {
     )
 })
 
-// listen for request
 self.addEventListener('fetch', (event) => {
     event.respondWith(
         caches.match(event.request).then((res) => {
-            return fetch(event.request).catch(() => caches.match('offline.html'))
+            return fetch(event.request).catch(() => caches.match('./offline.html'))
         })
     )
 })
 
-// activate the service worker
 self.addEventListener('activate', (event) => {
     const cacheWhitelist = []
     cacheWhitelist.push(CACHE_NAME)
