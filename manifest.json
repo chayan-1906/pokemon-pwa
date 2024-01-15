@@ -3,7 +3,7 @@
   "name": "Pokemon PWA",
   "icons": [
     {
-      "src": "./pokemon.png",
+      "src": "pokemon.png",
       "type": "image/png",
       "sizes": "192x192",
       "purpose": "any maskable"
