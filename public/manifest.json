@@ -1,12 +1,12 @@
 {
   "short_name": "Pokemon PWA",
   "name": "Pokemon PWA",
+  "description": "Pokemon Web App to install PWA",
   "icons": [
     {
-      "src": "pokemon.png",
-      "type": "image/png",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "purpose": "any maskable"
+      "src": "/pokemon.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
   ],
   "start_url": ".",
